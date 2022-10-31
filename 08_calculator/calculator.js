@@ -3,16 +3,32 @@ const add = function(num1, num2) {
 	
 };
 
-const subtract = function() {
-	
+const subtract = function(num1, num2) {
+  return (num1 - num2);
 };
 
-const sum = function() {
-	
+const sum = function(...args) {
+  let arr = args[0];
+ if(arr.length === 0) {
+  return 0;
+ } else if (arr.length === 1) {
+  return arr[0];
+ } else if (arr.length === 2) {
+  return arr[0] + arr[1];
+ } else {
+  let sum = 0;
+ for (let value of arr) {
+  sum += value;
+ } return sum;
+ }
 };
 
-const multiply = function() {
-
+const multiply = function(...args) {
+  let arr = args[0];
+  let num = 1;
+ for (let value of arr) {
+  num *= value;
+ } return num;
 };
 
 const power = function() {
