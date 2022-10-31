@@ -31,12 +31,19 @@ const multiply = function(...args) {
  } return num;
 };
 
-const power = function() {
-	
+const power = function(...args) {
+	return args[0] ** args[1];
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  let newFac = 1;
+	if ((num == 0) || (num == 1)) {
+    return 1;
+  } else {
+    for (let i = 1; i <= num; i++) {
+      newFac *= i;
+    } return newFac;
+  }
 };
 
 // Do not edit below this line
